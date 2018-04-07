@@ -1,1 +1,2 @@
-Hi, Aminux
+<?php
+require_once('../app/bootstrap.php');
