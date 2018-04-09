@@ -7,13 +7,36 @@ URL FORMAT - /Controller/Method/Params
 */
 
 class Core{
-    protected $currentController = 'pages';
+    protected $currentController = 'Pages';
     protected $currentMethod = 'index';
     protected $params = [];
 
     public function __construct(){
         $url = $this->getURL();
-        print_r($url);
+        /* currentController */
+        if(file_exists('../app/controllers/' . ucwords($url[0]). '.php')){
+            //if it exists, set as controller
+            $this->currentController = ucwords($url[0]);
+            //Unset 0 Index
+            unset($url[0]);
+        }
+        //requre the controller
+        require_once '../app/controllers/'.$this->currentController . '.php';
+        // instantiate controller class
+        $this->currentController = new $this->currentController;
+
+        /* current Method */
+        if(isset($url[1])){
+            if(method_exists($this->currentController, $url[1])){
+                $this->currentMethod = $url[1];
+                unset($url[1]);
+            }
+        }
+        //get params
+        $this->params = $url ? array_values($url) : [];
+        call_user_func_array([$this->currentController, $this->currentMethod], $this->params);
+
+        
     }
     public function getURL(){
         /* 
