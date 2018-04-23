@@ -8,3 +8,10 @@ define('APPROOT',dirname(dirname( __FILE__ )));
 define('URLROOT','http://localhost:8080/Asalsolmvc/');
 // site Name
 define('SITENAME','AsalFrame');
+
+
+// Database Params
+define('HOST','localhost');
+define('DBNAME','learnpdo');
+define('DBUSER','root');
+define('DBPASS','Aminux@11');
