@@ -37,6 +37,10 @@ class Database
 
 
     }
+    public function query($sql)
+    {
+        $this->stmt = $this->pdo->prepare($sql);
+    }
 
 
 }
