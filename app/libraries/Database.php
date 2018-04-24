@@ -58,7 +58,11 @@ class Database
                     $type = PDO::PARAM_STR;
             }
         }
+        $this->stmt->bindValue($param,$value,$type);
     }
 
-
+// execute prepared statements
+    public function execute(){
+        return $this->stmt->execute();
+    }
 }
