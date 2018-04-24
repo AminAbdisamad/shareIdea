@@ -1,6 +1,11 @@
 <!-- require headder -->
 <?php require_once APPROOT . '/views/inc/header.php';?>
 <h1><?php echo $data['title']; ?></h1>
-<h4><?php echo $data['body']; ?></h4>
+<ul><?php foreach($data['posts'] as $post) :  ?>
+    <li>
+       <?php echo $post->title;?>
+    </li>
+<?php endforeach; ?>
+</ul>    
 <!-- require footer -->
 <?php require_once APPROOT . '/views/inc/footer.php';?>

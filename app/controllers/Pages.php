@@ -5,8 +5,9 @@ class Pages extends Controller{
         
     }
     public function index(){
+        $posts = $this->postModel->getPosts();
         $data = ['title'=>'Welcome',
-                'body'=>'This is the home page of this website'];
+                'posts'=>$posts];
         $this->view('pages/index',$data);
 
     }
