@@ -65,4 +65,9 @@ class Database
     public function execute(){
         return $this->stmt->execute();
     }
+    // get results as array of objects 
+    public function results(){
+        $this->execute();
+        return $this->stmt->fetchAll(PDO::FETCH_OBJ);
+    }
 }
