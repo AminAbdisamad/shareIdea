@@ -68,6 +68,11 @@ class Database
     // get results as array of objects 
     public function results(){
         $this->execute();
-        return $this->stmt->fetchAll(PDO::FETCH_OBJ);
+        return $this->stmt->fetchAll(PDO::FETCH_OBJ);       
+    }
+      // get singe result as object 
+      public function result(){
+        $this->execute();
+        return $this->stmt->fetch(PDO::FETCH_OBJ);       
     }
 }
