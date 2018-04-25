@@ -4,13 +4,13 @@
 //root app
 define('APPROOT',dirname(dirname( __FILE__ )));
 //site URL
-define('URLROOT','_URL_');
+define('URLROOT','http://192.168.64.2/shareIdea/');
 // site Name
-define('SITENAME','_YOUR_APPLICATION_NAME_');
+define('SITENAME','Share Idea');
 
 
 // Database Params
 define('HOST','localhost');
-define('DBNAME','_YOUR_DB_');
-define('DBUSER','_YOUR_DB_USER');
-define('DBPASS','_YOUR_DB_PASSWORD');
+define('DBNAME','shareIdea_db');
+define('DBUSER','root');
+define('DBPASS','Aminux@11');
