@@ -4,8 +4,8 @@ class Pages extends Controller{
         
     }
     public function index(){
-        $data = ['title'=>'Asal Frame',
-                 'Body'=>' is a simple PHP framework that let\'s you build powerfull applications in record time '];
+        $data = ['title'=>'Share Idea',
+                 'Body'=>' landing page'];
         $this->view('pages/index',$data);
 
     }
