@@ -4,7 +4,7 @@
     <div class="row " style="margin-bottom:0px;">
         <div class="col s6 blue darken-3">
             <div class="container">
-            <a href="<?php echo URLROOT?>"><img src="<?php echo URLROOT ?>/public/images/shareidea_med_logo.png" class="" style="margin-top:50px; margin-bottom:40px;"></a>
+            <a href="<?php echo URLROOT?>"><img src="<?php echo URLROOT ?>/public/images/shareidea_med_logo.png" class="" style="margin-top:60px; margin-bottom:40px;"></a>
                 <div class="row">
                     <div class="col s2" >
                         <i class="material-icons medium white-text">group_add</i>
@@ -43,7 +43,17 @@
         <div class="col s6 white">
             <div class="container">
             <div class="row" style="margin-top:55px;">
-                <h3 class="flow-text blue-text text-darken-3"> Sign in </h3>
+                <div class="row">
+                    <div class="col s4"> 
+                        <h3 class="flow-text blue-text text-darken-3"> Sign in </h3> 
+                    </div>
+                    <div class="col s8 right-align"> <!-- Create Account-->
+                        <p>Don't have an account ? 
+                        <a href="#">Create now </a>
+                        </p>
+                    </div> 
+                </div>
+                <!-- divider --><div class="divider" style="margin-bottom:60px;"></div>
                 <form>
                     <div class="row"> 
                         <!-- Email Address -->
@@ -73,11 +83,6 @@
                         <a href="#"><p class="blue-text text-darken-3">Forget Password</p></a>
                         </div>
                         
-                         <!-- Create Account-->
-                         <div class="col s12 center-align"><p>Don't have an account ? 
-                            <a href="#">Create now </a></p>
-                        </div>
-
                     </div>
                 </form>
             </div>
