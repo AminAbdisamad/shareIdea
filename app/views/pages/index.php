@@ -42,7 +42,40 @@
         </div>
         <div class="col s6 white">
             <div class="container">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni obcaecati aliquid doloremque incidunt, saepe hic repellat, sequi asperiores quisquam quo fugiat ratione voluptas. Enim doloribus quos accusamus sequi optio facere quam quia nostrum odit reprehenderit fugit repellat dolorum, praesentium molestias aliquid. Repudiandae, quos similique tempora cum fuga assumenda accusantium quia!</p>
+            <div class="row" style="margin-top:55px;">
+                <form>
+                    <div class="row"> 
+                        <!-- Email Address -->
+                        <div class="input-field col s12">
+                        <i class="material-icons prefix blue-text text-darken-3">email</i>
+                        <input id="icon_prefix" type="text" class="validate">
+                        <label for="icon_prefix">Your Email</label>
+                        </div>
+                        <!-- Password -->
+                        <div class="input-field col s12">
+                        <i class="material-icons prefix blue-text text-darken-3">lock</i>
+                        <input id="icon_telephone" type="password" class="validate">
+                        <label for="icon_telephone">Your Password</label>
+                        </div>
+                        <!-- sign in --> 
+                        <div class="input-field col s6 center-align">
+                        <button class="waves-effect waves-light btn blue darken-3" type="submit" name="login"> 
+                        <i class="material-icons right">send</i> Login
+                        </button>
+                        </div>
+                        <!-- forget password -->
+                        <div class="input-field col s6 center-align">
+                        <a href="#"><p class="blue-text text-darken-3">Forget Password</p></a>
+                        </div>
+                        
+                         <!-- Create Account-->
+                         <div class="col s12 center-align"><p>Don't have an account ? 
+                            <a href="#">Create now </a></p>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
             </div>
         </div>
     </div>
