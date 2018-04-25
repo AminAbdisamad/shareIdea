@@ -16,6 +16,11 @@
     border-bottom: 1px solid #1565c0;
     box-shadow: 0 1px 0 0 #1565c0;
   }
+  /* Email underline focus color */
+  .input-field input[type=email]:focus {
+    border-bottom: 1px solid #1565c0;
+    box-shadow: 0 1px 0 0 #1565c0;
+  }
   /* valid color */
   .input-field input[type=text].valid {
     border-bottom: 1px solid #1565c0;
@@ -28,6 +33,6 @@
   }
   /* icon prefix focus color */
   .input-field .prefix.active {
-    color: #000;
+    color: #1565c0;
   }
        

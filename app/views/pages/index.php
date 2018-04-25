@@ -48,14 +48,18 @@
                         <!-- Email Address -->
                         <div class="input-field col s12">
                         <i class="material-icons prefix blue-text text-darken-3">email</i>
-                        <input id="icon_prefix" type="text" class="validate">
+                        <input id="icon_prefix" type="email" name = "email" class="validate">
                         <label for="icon_prefix">Your Email</label>
+                        <!-- error message for email -->
+                        <span class="helper-text" data-error="wrong" data-success="right"></span>
                         </div>
                         <!-- Password -->
                         <div class="input-field col s12">
                         <i class="material-icons prefix blue-text text-darken-3">lock</i>
-                        <input id="icon_telephone" type="password" class="validate">
+                        <input id="icon_telephone" type="password" name = "password" class="validate">
                         <label for="icon_telephone">Your Password</label>
+                        <!-- error message for email -->
+                        <span class="helper-text" data-error="Wrong Password" data-success="right"></span>
                         </div>
                         <!-- sign in --> 
                         <div class="input-field col s6 center-align">

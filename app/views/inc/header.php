@@ -23,9 +23,9 @@
                     <div class="container">
                         <a href="<?php echo URLROOT?>" class="brand-logo "><img src="<?php echo URLROOT ?>/public/images/shareidea_logo.png" class="" style="margin-top:10px;"></a>
                         <ul class="right hide-on-med-and-down">
-                        <li><a class="blue-text text-darken-3" href="<?php echo URLROOT?>about.php">About</a></li>
-                        <li><a class="blue-text text-darken-3" href="<?php echo URLROOT?>login.php">Login</a></li>
-                        <li><a class="blue-text text-darken-3" href="<?php echo URLROOT?>signup.php">Created Account</a></li>
+                        <li><a class="blue-text text-darken-3" href="<?php echo URLROOT?>pages/about">About</a></li>
+                        <li><a class="blue-text text-darken-3" href="<?php echo URLROOT?>users/login">Login</a></li>
+                        <li><a class="blue-text text-darken-3" href="<?php echo URLROOT?>users/register">Register</a></li>
                         </ul>
                     </div>
                 </div>
