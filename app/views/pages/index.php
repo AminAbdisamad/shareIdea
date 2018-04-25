@@ -4,7 +4,7 @@
     <div class="row " style="margin-bottom:0px;">
         <div class="col s6 blue darken-3">
             <div class="container">
-            <a href="<?php echo URLROOT?>"><img src="<?php echo URLROOT ?>/public/images/shareidea_big_logo.png" class="" style="margin-top:30px;"></a>
+            <a href="<?php echo URLROOT?>"><img src="<?php echo URLROOT ?>/public/images/shareidea_med_logo.png" class="" style="margin-top:50px;"></a>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus deserunt ipsum blanditiis eligendi, quas voluptate, sint magni possimus ullam repellendus, asperiores itaque. Doloremque asperiores neque aspernatur similique sequi atque sit, molestias reiciendis quam ratione aperiam voluptatibus minus quae deleniti voluptate magnam iusto? Recusandae atque obcaecati possimus? Eos optio corporis rem.</p>
             </div>
         </div>
