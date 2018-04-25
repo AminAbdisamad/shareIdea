@@ -5,7 +5,39 @@
         <div class="col s6 blue darken-3">
             <div class="container">
             <a href="<?php echo URLROOT?>"><img src="<?php echo URLROOT ?>/public/images/shareidea_med_logo.png" class="" style="margin-top:50px;"></a>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus deserunt ipsum blanditiis eligendi, quas voluptate, sint magni possimus ullam repellendus, asperiores itaque. Doloremque asperiores neque aspernatur similique sequi atque sit, molestias reiciendis quam ratione aperiam voluptatibus minus quae deleniti voluptate magnam iusto? Recusandae atque obcaecati possimus? Eos optio corporis rem.</p>
+                <div class="row" style="margin-top:20px;">
+                    <div class="col s2" >
+                        <i class="material-icons medium white-text">group_add</i>
+                    </div>
+                    <div class="col s10">
+                        <p class="white-text">You need to register before initiating an application</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s2" >
+                        <i class="material-icons medium white-text">person_add</i>
+                    </div>
+                    <div class="col s10">
+                        <p class="white-text">Create Your Account for free</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s2" >
+                        <i class="material-icons medium white-text">person_pin</i>
+                    </div>
+                    <div class="col s10">
+                        <p class="white-text">Hear business ideas of your friends</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s2" >
+                        <i class="material-icons medium white-text">chat</i>
+                    </div>
+                    <div class="col s10">
+                        <p class="white-text">Join the conversation</p>
+                    </div>
+                </div> <!-- end of row -->
+    
             </div>
         </div>
         <div class="col s6 white">
