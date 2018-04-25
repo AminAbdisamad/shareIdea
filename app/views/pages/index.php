@@ -10,7 +10,7 @@
                         <i class="material-icons medium white-text">group_add</i>
                     </div>
                     <div class="col s10">
-                        <p class="white-text">You need to register before initiating an application</p>
+                        <p class="white-text"  style="font-size:19px;">You need to register before initiating an application</p>
                     </div>
                 </div>
                 <div class="row">
@@ -18,7 +18,7 @@
                         <i class="material-icons medium white-text">person_add</i>
                     </div>
                     <div class="col s10">
-                        <p class="white-text">Create Your Account for free</p>
+                        <p class="white-text" style="font-size:19px;">Create Your Account for free</p>
                     </div>
                 </div>
                 <div class="row">
@@ -26,7 +26,7 @@
                         <i class="material-icons medium white-text">person_pin</i>
                     </div>
                     <div class="col s10">
-                        <p class="white-text">Hear business ideas of your friends</p>
+                        <p class="white-text" style="font-size:19px;">Hear business ideas of your friends</p>
                     </div>
                 </div>
                 <div class="row">
@@ -34,7 +34,7 @@
                         <i class="material-icons medium white-text">chat</i>
                     </div>
                     <div class="col s10">
-                        <p class="white-text">Join the conversation</p>
+                        <p class="white-text" style="font-size:19px;">Join the conversation</p>
                     </div>
                 </div> <!-- end of row -->
     
