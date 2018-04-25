@@ -1,17 +1,16 @@
 <?php 
-//path of the file
-//echo dirname(dirname(dirname( __FILE__ )));
+
 
 //root app
 define('APPROOT',dirname(dirname( __FILE__ )));
 //site URL
-define('URLROOT','http://localhost:8080/Asalsolmvc/');
+define('URLROOT','_URL_');
 // site Name
-define('SITENAME','AsalFrame');
+define('SITENAME','_YOUR_APPLICATION_NAME_');
 
 
 // Database Params
 define('HOST','localhost');
-define('DBNAME','learnpdo');
-define('DBUSER','root');
-define('DBPASS','Aminux@11');
+define('DBNAME','_YOUR_DB_');
+define('DBUSER','_YOUR_DB_USER');
+define('DBPASS','_YOUR_DB_PASSWORD');
