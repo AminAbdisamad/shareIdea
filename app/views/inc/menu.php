@@ -26,10 +26,18 @@
             </nav>
         </div>
           <!-- Responsive Menu on sidebar--> 
-        <ul class="sidenav" id="mobile-nav">
-                <li><a href="sass.html">Sass</a></li>
-                <li><a href="badges.html">Components</a></li>
-                <li><a href="collapsible.html">Javascript</a></li>
-                <li><a href="mobile.html">Mobile</a></li>
+        <ul class="sidenav blue darken-3" id="mobile-nav">
+        <li>
+            <a class="white-text" href="<?php echo URLROOT?>pages/about">
+            <i class="material-icons left white-text">person</i>About</a>
+        </li>
+        <li>
+            <a class="white-text" href="<?php echo URLROOT?>users/login">
+            <i class="material-icons left white-text">lock</i>Login</a>
+        </li>
+        <li>
+            <a class="white-text" href="<?php echo URLROOT?>users/register">
+            <i class="material-icons left white-text">group_add</i>Register</a>
+        </li>
         </ul>
     </header>
