@@ -1,21 +1,21 @@
 <?php require_once APPROOT.'/views/inc/header.php';?>
 <main>
     <div class="container">
-    <div class="row" style="margin-top:50px;">
+    <div class="row" style="margin-top:25px;">
   
-    <div class="col s12 m12 l12">
+    <div class="col s12 m12 l8 offset-l2">
     <div class="card">
         <div class="row">
             <div class="container">
            <!-- sing in starts here -->
            <div class="col col s12 m12 l12  white">
             <div class="container">
-            <div class="row" style="margin-top:55px;">
+            <div class="row" style="margin-top:25px;">
                 <div class="row">
-                    <div class="col s12 m12 l4"> 
+                    <div class="col s12 m12 l12 center-align"> 
                         <h3 class="flow-text blue-text text-darken-3"> Sign in </h3> 
                     </div>
-                    <div class="col s12 m12 l8 right-align"> <!-- Create Account-->
+                    <div class="col s12 m12 l12 center-align"> <!-- Create Account-->
                         <p style="font-size:16px;">Don't have an account ? 
                         <a href="<?php echo URLROOT?>users/register">Create now </a>
                         </p>
