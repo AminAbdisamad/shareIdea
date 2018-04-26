@@ -31,13 +31,11 @@ class Users extends Controller
             if(empty($data['name'])){
                 $data['name_err'] = 'Enter Your Name';
             }
-            // validate password
+            // Validate Password
             if(empty($data['password'])){
-                $data['password_err'] = 'Enter Your Password';
-            }else{
-                if(strlen($data['password'] < 6)){
-                    $data['password_err'] = 'Password must be at least 6 characters';
-                }
+            $data['password_err'] = 'Pleae enter password';
+            } elseif(strlen($data['password']) < 6){
+            $data['password_err'] = 'Password must be at least 6 characters';
             }
             
 
