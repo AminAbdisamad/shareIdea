@@ -34,10 +34,12 @@ class Users extends Controller
             // validate password
             if(empty($data['password'])){
                 $data['password_err'] = 'Enter Your Password';
+            }else{
+                if(strlen($data['password'] < 6)){
+                    $data['password_err'] = 'Password must be at least 6 characters';
+                }
             }
-            if(strlen($data['password'] < 6)){
-                $data['password_err'] = 'Password must be at least 6 characters';
-            }
+            
 
             // is confirm-password empty
             if(empty($data['confirm_password'])){

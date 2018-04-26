@@ -30,29 +30,31 @@
                         <input id="name" type="text" name = "name" value="<?php echo $data['name']?>" class="validate">
                         <label for="name">Your Name</label>
                          <!-- error message for Name -->
-                         <span class="helper-text" data-error="<?php if(empty($data['name'])) : echo $data['name_err']; endif; ?>" data-success=""></span>
+                         <span class="helper-text red-text" data-error="<?php echo $data['name_err']; ?>" data-success=""><?php echo $data['name_err']; ?></span>
                         </div>
                         <!-- Email Address -->
                         <div class="input-field col s12">
                         <i class="material-icons prefix blue-text text-darken-3">email</i>
-                        <input id="email" type="email" name = "email" class="validate">
+                        <input id="email" type="email" name = "email" value="<?php echo $data['email']?>"  class="validate">
                         <label for="email">Your Email</label>
                         <!-- error message for email -->
-                        <span class="helper-text" data-error="wrong" data-success="right"></span>
+                         <span class="helper-text red-text" data-error="<?php echo $data['email_err']; ?>" data-success=""><?php echo $data['email_err']; ?></span>
                         </div>
                         <!-- Password -->
                         <div class="input-field col s12">
                         <i class="material-icons prefix blue-text text-darken-3">lock</i>
-                        <input id="password" type="password" name = "password" class="validate">
+                        <input id="password" type="password" name = "password" value="<?php echo $data['password']?>" class="validate">
                         <label for="password">Your Password</label>
+                        <!-- error message for Password -->
+                        <span class="helper-text red-text" data-error="<?php echo $data['password_err']; ?>" data-success=""><?php echo $data['password_err']; ?></span>
                         </div>
                          <!-- Confirm Your Password -->
                          <div class="input-field col s12">
                         <i class="material-icons prefix blue-text text-darken-3">lock</i>
-                        <input id="confirm_password" type="password" name = "confirm_password" class="validate">
+                        <input id="confirm_password" type="password" name = "confirm_password" value="<?php echo $data['confirm_password']?>" class="validate">
                         <label for="confirm_password">Confirm Your Password</label>
-                        <!-- error message for email -->
-                        <span class="helper-text" data-error="Wrong Password" data-success="right"></span>
+                        <!-- error message for Confirm Password -->
+                        <span class="helper-text red-text" data-error="<?php echo $data['confirm_password_err']; ?>" data-success=""><?php echo $data['confirm_password_err']; ?></span>
                         </div>
                         <!-- sign in --> 
                         <div class="input-field col s12 m6 l6">
