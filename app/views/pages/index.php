@@ -39,7 +39,7 @@
                 </div> <!-- end of row -->
     
             </div>
-        </div>
+        </div> <!-- Sing in section starts here -->
         <div class="col col s12 m6 l6  white">
             <div class="container">
             <div class="row" style="margin-top:55px;">
@@ -49,7 +49,7 @@
                     </div>
                     <div class="col s12 m12 l8 right-align"> <!-- Create Account-->
                         <p style="font-size:16px;">Don't have an account ? 
-                        <a href="#">Create now </a>
+                        <a href="<?php echo URLROOT?>users/register">Create now </a>
                         </p>
                     </div> 
                 </div>
