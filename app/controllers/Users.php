@@ -35,7 +35,7 @@ class Users extends Controller
             }
             // Validate Password
             if(empty($data['password'])){
-            $data['password_err'] = 'Pleae enter password';
+            $data['password_err'] = 'Please enter a password';
             } elseif(strlen($data['password']) < 6){
             $data['password_err'] = 'Password must be at least 6 characters';
             }
@@ -51,8 +51,15 @@ class Users extends Controller
             }
             // make sure errors are empty
             if(empty($data['name_err']) && empty($data['email_err']) && empty($data['password_err']) && empty($data['confirm_password_err'])) {
-                // validated
-                die('Successfully Submitted');
+                // Hash password
+                $data['password'] = password_hash($data['password'],PASSWORD_DEFAULT);
+                if($this->usermodel->register($data)){
+                    //Successfully submited - redirect to login page
+                    redirect('users/login');
+                    
+                }else{
+                    die('Oops! Something went wrong');
+                }
             }else{
                 // load view with errors 
                 $this->view('users/register',$data);

@@ -1,7 +1,8 @@
 <?php
 //load config 
 require_once 'config/config.php';
-//load libraries
+//load url helper
+require_once 'helpers/url_helper.php';
 
 
 //auto load libraries
