@@ -48,7 +48,7 @@
                         <h3 class="flow-text blue-text text-darken-3"> Sign in </h3> 
                     </div>
                     <div class="col s8 right-align"> <!-- Create Account-->
-                        <p>Don't have an account ? 
+                        <p style="font-size:16px;">Don't have an account ? 
                         <a href="#">Create now </a>
                         </p>
                     </div> 
