@@ -8,6 +8,7 @@ class Pages extends Controller{
                  'Body'=>' landing page'];
         $this->view('pages/index',$data);
 
+
     }
 
     public function about(){
