@@ -73,13 +73,13 @@
                         <span class="helper-text" data-error="Wrong Password" data-success="right"></span>
                         </div>
                         <!-- sign in --> 
-                        <div class="input-field col s6 center-align">
+                        <div class="input-field col s12 m6 l6 center-align">
                         <button class="waves-effect waves-light btn blue darken-3" type="submit" name="login"> 
                         <i class="material-icons right">send</i> Login
                         </button>
                         </div>
                         <!-- forget password -->
-                        <div class="input-field col s6 center-align">
+                        <div class="input-field col s12 m6 l6 center-align">
                         <a href="#"><p class="blue-text text-darken-3">Forget Password</p></a>
                         </div>
                         
