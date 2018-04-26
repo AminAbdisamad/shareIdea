@@ -13,7 +13,7 @@ class Users extends Controller
             // filter POST Data
             $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
             // Init data
-            $data =[
+            $data = [
                 'name' => trim($_POST['name']),
                 'email' => trim($_POST['email']),
                 'password' => trim($_POST['password']),
@@ -52,6 +52,7 @@ class Users extends Controller
                 // validated
                 die('Successfully Submitted');
             }else{
+                // load view with errors 
                 $this->view('users/register',$data);
             }
             
@@ -73,10 +74,50 @@ class Users extends Controller
             $this->view('users/register', $data);
           }    
 }
-public function login(){
-    $data = ['name' => ''
-];
-    $this->view('users/login', $data);
-}
+
+//User Login Method
+    public function login(){
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
+        $_POST = filter_input_array(INPUT_POST,FILTER_SANITIZE_STRING);
+
+        //get data
+        $data = [
+            'email' => trim($_POST['email']),
+            'password' => trim($_POST['password']),
+            'email_err' => '',
+            'password_err' => ''
+        ];
+        // validate Email
+        if(empty($data['email'])){
+            $data['email_err'] = 'Please enter your email';
+        }
+        
+        // validate password
+        if(empty($data['password'])){
+            $data['password_err'] = 'Please enter your password';
+        }
+        // validate if not empty
+        if(empty($data['email_err']) && empty($data['password_err'])){
+            die('Success!');
+        }else{
+            // load login view with errors 
+            $this -> view('/users/login', $data);
+        }
+
+    }
+    else {
+        // Init data
+        $data =[
+          'email' => '',
+          'password' => '',
+          'email_err' => '',
+          'password_err' => ''
+        ];
+
+        // Load view
+        $this->view('users/login', $data);
+      }    
+
+    }
 
 }

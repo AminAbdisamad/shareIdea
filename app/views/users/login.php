@@ -22,23 +22,23 @@
                     </div> 
                 </div>
                 <!-- divider --><div class="divider" style="margin-bottom:60px;"></div>
-                <form>
+                <form action="<?php echo URLROOT; ?>users/login" method='post'>
                     <div class="row"> 
                         <!-- Email Address -->
                         <div class="input-field col s12">
                         <i class="material-icons prefix blue-text text-darken-3">email</i>
-                        <input id="icon_prefix" type="email" name = "email" class="validate">
-                        <label for="icon_prefix">Your Email</label>
+                        <input id="email" type="email" name = "email" value="<?php echo $data['email']?>" class="validate">
+                        <label for="email">Your Email</label>
                         <!-- error message for email -->
-                        <span class="helper-text" data-error="wrong" data-success="right"></span>
+                        <span class="helper-text red-text" data-error="" data-success=""><?php echo $data['email_err']?></span>
                         </div>
                         <!-- Password -->
                         <div class="input-field col s12">
                         <i class="material-icons prefix blue-text text-darken-3">lock</i>
-                        <input id="icon_telephone" type="password" name = "password" class="validate">
-                        <label for="icon_telephone">Your Password</label>
+                        <input id="password" type="password" name = "password" value="<?php echo $data['password']?>" class="validate">
+                        <label for="password">Your Password</label>
                         <!-- error message for email -->
-                        <span class="helper-text" data-error="Wrong Password" data-success="right"></span>
+                        <span class="helper-text red-text" data-error="" data-success=""><?php echo $data['password_err']?></span>
                         </div>
                         <!-- sign in --> 
                         <div class="input-field col s12 m6 l6 center-align">
