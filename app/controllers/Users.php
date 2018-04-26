@@ -26,6 +26,8 @@ class Users extends Controller
             // valideate email
             if(empty($data['email'])){
                 $data['email_err'] = 'Enter Your Email';
+            }elseif($this->usermodel->findUserByEmail($data['email'])){
+                $data['email_err'] = 'This email is already taken';
             }
             // is name empty
             if(empty($data['name'])){
