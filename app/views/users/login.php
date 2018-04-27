@@ -9,8 +9,10 @@
             <div class="container">
            <!-- sing in starts here -->
            <div class="col col s12 m12 l12  white">
+                <!--Flash messages -->
+            <?php echo flash('register_success'); ?>
             <div class="container">
-            <div class="row" style="margin-top:25px;">
+            <div class="row" style="margin-top:15px;">
                 <div class="row">
                     <div class="col s12 m12 l12 center-align"> 
                         <h3 class="flow-text blue-text text-darken-3"> Sign in </h3> 

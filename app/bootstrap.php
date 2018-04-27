@@ -1,8 +1,9 @@
 <?php
 //load config 
 require_once 'config/config.php';
-//load url helper
+//load Helpers
 require_once 'helpers/url_helper.php';
+require_once 'helpers/session_helper.php';
 
 
 //auto load libraries
