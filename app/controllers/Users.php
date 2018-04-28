@@ -120,7 +120,7 @@ class Users extends Controller
             $logedInUser = $this->usermodel->login($data['email'],$data['password']);
             if($logedInUser){
                 //Create session for the user
-                die("Sucessfully logged In");
+                $this->createUserSession($logedInUser);
                 // redirect to home page
             }else{
                 $data['password_err'] = 'Password not found';
@@ -145,6 +145,14 @@ class Users extends Controller
         $this->view('users/login', $data);
       }    
 
+    }
+    // Create Logged In user session
+    public function createUserSession($user){
+        $_SESSION['user_id'] = $user->id;
+        $_SESSION['user_email'] = $user->email;
+        $_SESSION['user_name'] = $user->name;
+        // direct to dashboard or index
+        $this->view('/pages/index');
     }
 
 }
