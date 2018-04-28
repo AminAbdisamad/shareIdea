@@ -11,6 +11,16 @@
                         <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons blue-text text-darken-3">menu</i>
                         </a>
                         <ul class="right hide-on-med-and-down">
+                            
+                            <?php if(isset($_SESSION['user_id'])) : ?>
+                            <li>
+                                <a class="blue-text text-darken-3" href="<?php echo URLROOT?>users/profile"><?php echo $_SESSION['user_name'];?></a>
+                            </li>
+                            <li>
+                                <a class="blue-text text-darken-3" href="<?php echo URLROOT?>users/login">Logout</a>
+                            </li>
+
+                            <?php else: ?>
                             <li>
                                 <a class="blue-text text-darken-3" href="<?php echo URLROOT?>pages/about">About</a>
                             </li>
@@ -20,6 +30,7 @@
                             <li>
                                 <a class="blue-text text-darken-3" href="<?php echo URLROOT?>users/register">Register</a>
                             </li>
+                            <?php endif; ?>
                         </ul>
                     </div>
                 </div>

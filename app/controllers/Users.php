@@ -152,7 +152,8 @@ class Users extends Controller
         $_SESSION['user_email'] = $user->email;
         $_SESSION['user_name'] = $user->name;
         // direct to dashboard or index
-        $this->view('/pages/index');
+        $this->view('pages/index');
     }
+    // User Logout
 
 }
