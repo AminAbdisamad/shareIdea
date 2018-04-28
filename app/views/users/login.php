@@ -37,7 +37,7 @@
                         <!-- Password -->
                         <div class="input-field col s12">
                         <i class="material-icons prefix blue-text text-darken-3">lock</i>
-                        <input id="password" type="password" name = "password" value="<?php echo $data['password']?>" class="validate">
+                        <input id="password" type="password" name = "password" value="" class="validate">
                         <label for="password">Your Password</label>
                         <!-- error message for email -->
                         <span class="helper-text red-text" data-error="" data-success=""><?php echo $data['password_err']?></span>

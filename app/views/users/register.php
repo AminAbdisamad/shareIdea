@@ -27,7 +27,7 @@
                           <!-- Your Name -->
                         <div class="input-field col s12">
                         <i class="material-icons prefix blue-text text-darken-3">person</i>
-                        <input id="name" type="text" name = "name" value="<?php echo $data['name']?>" class="validate">
+                        <input id="name" type="text" name = "name" value="<?php echo $data['name']?>" class="validate <?php echo $data['name_err'] ? 'invalid' : ''; ?>">
                         <label for="name">Your Name</label>
                          <!-- error message for Name -->
                          <span class="helper-text red-text" data-error="<?php echo $data['name_err']; ?>" data-success=""><?php echo $data['name_err']; ?></span>
@@ -43,7 +43,7 @@
                         <!-- Password -->
                         <div class="input-field col s12">
                         <i class="material-icons prefix blue-text text-darken-3">lock</i>
-                        <input id="password" type="password" name = "password" value="<?php echo $data['password']?>" class="validate">
+                        <input id="password" type="password" name = "password" value="" class="validate">
                         <label for="password">Your Password</label>
                         <!-- error message for Password -->
                         <span class="helper-text red-text" data-error="<?php echo $data['password_err']; ?>" data-success=""><?php echo $data['password_err']; ?></span>
@@ -51,7 +51,7 @@
                          <!-- Confirm Your Password -->
                          <div class="input-field col s12">
                         <i class="material-icons prefix blue-text text-darken-3">lock</i>
-                        <input id="confirm_password" type="password" name = "confirm_password" value="<?php echo $data['confirm_password']?>" class="validate">
+                        <input id="confirm_password" type="password" name = "confirm_password" value="" class="validate">
                         <label for="confirm_password">Confirm Your Password</label>
                         <!-- error message for Confirm Password -->
                         <span class="helper-text red-text" data-error="<?php echo $data['confirm_password_err']; ?>" data-success=""><?php echo $data['confirm_password_err']; ?></span>

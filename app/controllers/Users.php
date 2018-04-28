@@ -3,7 +3,7 @@ class Users extends Controller
 {
     public function __construct()
     {
-        $this-> usermodel = $this->model('User');
+        $this->usermodel = $this->model('User');
     }
 
 
@@ -107,9 +107,25 @@ class Users extends Controller
         if(empty($data['password'])){
             $data['password_err'] = 'Please enter your password';
         }
-        // validate if not empty
+        // check User email
+        if($this->usermodel->findUserByEmail($data['email'])){
+            // User found
+        }else{
+            //User not found
+            $data['email_err'] = 'Sorry! We couldn\'t recognize that email';
+        }
+        // Make sure errors are empty
         if(empty($data['email_err']) && empty($data['password_err'])){
-            die('Success!');
+            // validate 
+            $logedInUser = $this->usermodel->login($data['email'],$data['password']);
+            if($logedInUser){
+                //Create session for the user
+                die("Sucessfully logged In");
+                // redirect to home page
+            }else{
+                $data['password_err'] = 'Password not found';
+                $this->view('/users/login',$data);
+            }
         }else{
             // load login view with errors 
             $this -> view('/users/login', $data);
