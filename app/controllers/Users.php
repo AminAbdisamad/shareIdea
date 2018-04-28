@@ -154,16 +154,27 @@ class Users extends Controller
         // direct to dashboard or index
         $this->view('pages/index');
     }
+
     // User Logout
     public function logout(){
         unset($_SESSION['user_id']);
         unset($_SESSION['user_email']);
         unset($_SESSION['user_name']);
         session_destroy();
-         // flash message
-         flash('logout_success','You have logout successfully');
-         redirect('/users/login');
+        //redirect to login page
+        redirect('/users/login');
+          // flash message
+        flash('logout_success','You have logout successfully');
         
+    }
+
+    //check if user logged in
+    public function isLoggedIn(){
+        if($_SESSION['user_id']){
+            return true;
+        }else{
+            return false;
+        }
     }
 
 }
