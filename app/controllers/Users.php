@@ -101,19 +101,19 @@ class Users extends Controller
         // validate Email
         if(empty($data['email'])){
             $data['email_err'] = 'Please enter your email';
+        } // check User email
+        elseif($this->usermodel->findUserByEmail($data['email'])){
+            // User found
+        }else{
+            //User not found
+            $data['email_err'] = 'Sorry! We couldn\'t recognize that email';
         }
         
         // validate password
         if(empty($data['password'])){
             $data['password_err'] = 'Please enter your password';
         }
-        // check User email
-        if($this->usermodel->findUserByEmail($data['email'])){
-            // User found
-        }else{
-            //User not found
-            $data['email_err'] = 'Sorry! We couldn\'t recognize that email';
-        }
+       
         // Make sure errors are empty
         if(empty($data['email_err']) && empty($data['password_err'])){
             // validate 
@@ -155,5 +155,15 @@ class Users extends Controller
         $this->view('pages/index');
     }
     // User Logout
+    public function logout(){
+        unset($_SESSION['user_id']);
+        unset($_SESSION['user_email']);
+        unset($_SESSION['user_name']);
+        session_destroy();
+         // flash message
+         flash('logout_success','You have logout successfully');
+         redirect('/users/login');
+        
+    }
 
 }

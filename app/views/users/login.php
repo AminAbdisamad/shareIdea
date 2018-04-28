@@ -9,8 +9,10 @@
             <div class="container">
            <!-- sing in starts here -->
            <div class="col col s12 m12 l12  white">
-                <!--Flash messages -->
+                <!--User registration Flash messages -->
             <?php echo flash('register_success'); ?>
+               <!--User logout Flash messages -->
+            <?php echo flash('logout_success'); ?>
             <div class="container">
             <div class="row" style="margin-top:15px;">
                 <div class="row">

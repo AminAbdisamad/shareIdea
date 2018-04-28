@@ -17,7 +17,7 @@
                                 <a class="blue-text text-darken-3" href="<?php echo URLROOT?>users/profile"><?php echo $_SESSION['user_name'];?></a>
                             </li>
                             <li>
-                                <a class="blue-text text-darken-3" href="<?php echo URLROOT?>users/login">Logout</a>
+                                <a class="blue-text text-darken-3" href="<?php echo URLROOT?>users/logout">Logout</a>
                             </li>
 
                             <?php else: ?>
