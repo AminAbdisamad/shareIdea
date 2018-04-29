@@ -25,3 +25,12 @@
       }
     }
   }
+
+  //check if user logged in
+function isLoggedIn(){
+    if($_SESSION['user_id']){
+        return true;
+    }else{
+        return false;
+    }
+}

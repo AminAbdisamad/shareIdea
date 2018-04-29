@@ -10,14 +10,14 @@
                
                 <form>
                 <div class="row">
-                    <div class="s12 m12 l10">
+                    <div class="col s12 m12 l10">
                     <div class="input-field">
                         <i class="material-icons prefix">edit_mode</i>
                         <textarea id="post" type="text" class="materialize-textarea"  name="post"></textarea>
                         <label for="post">What's on your mind</label>
                     </div>
                     </div>
-                    <div class="s12 m12 l2 right">
+                    <div class="col s12 m12 l2">
                     <button type="submit" name="addpost" class="btn btn-floating blue darken-3"><i class="material-icons">add</i></button>
                     </div>
                 </div>
@@ -25,11 +25,12 @@
                 <!-- display posts -->
                 <ul class="collection">
                     <!-- post 1 -->
+                    <?php foreach($data['posts'] as $post) : ?>
                     <li class="collection-item avatar">
                     <img src="<?php echo URLROOT?>/public/images/person1.jpg" alt="" class="circle">
-                    <span class="title"><strong>User Name</strong></span>
-                    <p><strong>Title </strong><br>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos repellat reprehenderit dolor doloremque. Fugit fugiat ab aut, praesentium nesciunt ratione quo ullam quidem sunt non!
+                    <span class="title"><strong><?php echo $post->name?></strong></span>
+                    <p><small><?php echo $post->postCreated?> </small><br>
+                        <?php echo $post->body?>
                     </p>
                     <!-- tabs for comments -->
                     <ul class="tabs">
@@ -38,7 +39,7 @@
                         <li class="tab col s4"><a href="#share">Share</a></li>
                     </ul>
                     <!-- tabs Link -->
-                    </li>
+                    </li> <?php endforeach;?>
                      <!-- post 2 -->
                      <li class="collection-item avatar">
                         <img src="<?php echo URLROOT?>/public/images/person1.jpg" alt="" class="circle">
@@ -46,6 +47,12 @@
                         <p><strong>Title </strong><br>
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos repellat reprehenderit dolor doloremque. Fugit fugiat ab aut, praesentium nesciunt ratione quo ullam quidem sunt non!
                         </p>
+                          <!-- tabs for comments -->
+                        <ul class="tabs">
+                            <li class="tab col s4"><a class="active" href="#likes">Likes</a></li>
+                            <li class="tab col s4"><a href="#comments">Comments</a></li>
+                            <li class="tab col s4"><a href="#share">Share</a></li>
+                        </ul>
                     </li>
                 </ul>
             </div>
