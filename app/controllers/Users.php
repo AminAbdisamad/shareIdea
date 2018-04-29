@@ -152,7 +152,7 @@ class Users extends Controller
         $_SESSION['user_email'] = $user->email;
         $_SESSION['user_name'] = $user->name;
         // direct to dashboard or index
-        $this->view('dashboard/index');
+        redirect('dashboard');
     }
 
     // User Logout
@@ -162,19 +162,12 @@ class Users extends Controller
         unset($_SESSION['user_name']);
         session_destroy();
         //redirect to login page
-        redirect('/users/login');
+        redirect('users/login');
           // flash message
         flash('logout_success','You have logout successfully');
         
     }
 
-    //check if user logged in
-    public function isLoggedIn(){
-        if($_SESSION['user_id']){
-            return true;
-        }else{
-            return false;
-        }
-    }
+    
 
 }
