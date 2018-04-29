@@ -1,10 +1,13 @@
 <!-- require headder -->
 <?php require_once APPROOT . '/views/inc/header.php';?>
+<!-- Main Menu here--> 
+<?php require_once APPROOT . '/views/inc/menu.php';?> 
+    
 <main>
     <div class="row " style="margin-bottom:0px;">
         <div class="col s12 m6 l6 blue darken-3">
             <div class="container">
-            <a href="<?php echo URLROOT?>"><img src="<?php echo URLROOT ?>/public/images/shareidea_med_logo.png" class="" style="margin-top:60px; margin-bottom:40px;"></a>
+            <a href="<?php echo URLROOT?>"><img src="<?php echo URLROOT ?>/public/images/shareidea_med_logo.png" class="responsive-img" style="margin-top:60px; margin-bottom:40px;"></a>
                 <div class="row">
                     <div class="col s2 m4 l2" >
                         <i class="material-icons medium white-text">group_add</i>

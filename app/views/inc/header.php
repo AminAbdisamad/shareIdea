@@ -15,6 +15,3 @@
     <title><?php echo SITENAME ?></title>
 </head>
 <body>
-<!-- Main Menu here--> 
-<?php require_once APPROOT . '/views/inc/menu.php';?> 
-    

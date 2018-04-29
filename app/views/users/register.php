@@ -1,4 +1,6 @@
 <?php require_once APPROOT.'/views/inc/header.php';?>
+<!-- Main Menu here--> 
+<?php require_once APPROOT . '/views/inc/menu.php';?> 
 <main>
     <div class="container">
     <div class="row" style="margin-top:30px;">
@@ -27,7 +29,7 @@
                           <!-- Your Name -->
                         <div class="input-field col s12">
                         <i class="material-icons prefix blue-text text-darken-3">person</i>
-                        <input id="name" type="text" name = "name" value="<?php echo $data['name']?>" class="validate <?php echo $data['name_err'] ? 'invalid' : ''; ?>">
+                        <input id="name" type="text" name = "name" value="<?php echo $data['name']?>" class="validate">
                         <label for="name">Your Name</label>
                          <!-- error message for Name -->
                          <span class="helper-text red-text" data-error="<?php echo $data['name_err']; ?>" data-success=""><?php echo $data['name_err']; ?></span>

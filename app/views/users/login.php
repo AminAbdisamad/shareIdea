@@ -1,4 +1,7 @@
 <?php require_once APPROOT.'/views/inc/header.php';?>
+<!-- Main Menu here--> 
+<?php require_once APPROOT . '/views/inc/menu.php';?> 
+    
 <main>
     <div class="container">
     <div class="row" style="margin-top:25px;">
