@@ -1,6 +1,6 @@
 <!-- Include header--> 
 <?php require_once APPROOT . '/views/inc/header.php';?> 
-<!-- Main Menu here--> 
+<!-- User Menu here--> 
 <?php require_once APPROOT . '/views/inc/usermenu.php';?> 
 <main>
     <div class="row">
@@ -40,6 +40,8 @@
                     </ul>
                     <!-- tabs Link -->
                     </li> <?php endforeach;?>
+                    <!-- Model starts -->
+                     
                      <!-- post 2 -->
                      <li class="collection-item avatar">
                         <img src="<?php echo URLROOT?>/public/images/person1.jpg" alt="" class="circle">
