@@ -8,13 +8,13 @@
                             <img src="<?php echo URLROOT ?>/public/images/shareidea_logo.png" style="margin-top:10px;">
                         </a> 
                         <!-- menu Icon -->
-                        <a href="#" data-target="mobile-nav" class="sidenav-trigger show-on-large right"><i class="material-icons blue-text text-darken-3">menu</i>
+                        <a href="#" data-target="mobile-nav" class="sidenav-trigger show-on-large right"> <img src="<?php echo URLROOT?>/public/images/person1.jpg" alt="" class="circle profile"><i class="material-icons blue-text text-darken-3"></i>
                         </a>
                         <ul class="right hide-on-med-and-down">
                             
                             <?php if(isset($_SESSION['user_id'])) : ?>
                             <li>
-                                <a href="#" class="blue-text text-darken-3">Posts</a>
+                                <a href="<?php echo URLROOT?>dashboard/findpeople" class="blue-text text-darken-3">Find People</a>
                             </li>
                             <li>
                                 <a href="#" class="blue-text text-darken-3">Categories</a>
