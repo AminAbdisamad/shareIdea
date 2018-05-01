@@ -58,4 +58,13 @@ class User extends Database
         }
     }
 
+    // find user by Id
+    public function findUserById($id)
+    {
+        $this->db->query('SELECT * FROM users WHERE id =:id');
+        $this->db->bind('id',$id);
+        $row = $this->db->result();
+        return $row;
+    }
+
 }

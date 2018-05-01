@@ -8,10 +8,11 @@ class Dashboard extends Controller
             redirect('users/login');
         }
         $this->dashboardModel = $this->model('DashboardModel');
+        $this->userModel = $this->model('User');
     }
     // Index page method
     public function index(){
-        //get posts
+        //Display  posts
         $posts = $this->dashboardModel->getPosts();
         $data = ['posts' =>$posts];
 
@@ -23,6 +24,20 @@ class Dashboard extends Controller
         $users = $this->dashboardModel->findPeople();
         $data = ['users' =>$users];
         $this->view('dashboard/findpeople',$data);
+    }
+
+    //Show Single Post
+    public function showPost($id){
+        $singlePost = $this->dashboardModel->getSinglePost($id);
+        if($singlePost){
+        $userId = $this->userModel->findUserById($singlePost->user_id);
+        $data =['Post' =>$singlePost,
+                'userId' =>$userId];
+        $this->view('dashboard/showpost',$data);
+        }else{
+            die('Oops! You are in the wrong page');
+        }
+        
     }
 
     // Add posts 
@@ -71,5 +86,25 @@ class Dashboard extends Controller
             $this->view('dashboard/index', $data);
           }    
     }
+
+    //Delete Post
+    public function delete($id)
+    {
+        if($_SERVER['REQUEST_METHOD'] == 'POST'){
+            $deletePost =$this->dashboardModel->deletePostById($id);
+            if($deletePost){
+                //flash message
+                flash('post_message','Post Deleted');
+                redirect('dashboard');
+            }else{
+                die('Something went wrong');
+        }
+        }else{
+            die('Oops! you\'re in the wrong page  ');
+        
+        }
+
+    }
+   
 
 }

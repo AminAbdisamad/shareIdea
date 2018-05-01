@@ -34,9 +34,9 @@
                     <li class="collection-item avatar">
                     <img src="<?php echo URLROOT?>/public/images/person1.jpg" alt="" class="circle">
                     <span class="title"><strong><?php echo $post->name?></strong></span>
-                    <p class="trancate"><small><?php echo $post->postCreated?> </small><br>
-                        <?php echo $post->body?>
-                    </p><a href="<?php URLROOT?>dashboard/showpost<?php echo $post->postId?>">Learn More</a>
+                    <p ><small><?php echo $post->postCreated?> </small><br>
+                        <span class="truncate"><?php echo $post->body?></span>
+                    </p><a href="<?php URLROOT?>dashboard/showPost/<?php echo $post->postId?>">Learn More</a>
                     <!-- tabs for comments -->
                     <ul class="tabs">
                         <li class="tab col s4"><a class="active" href="#likes">Likes</a></li>
@@ -45,22 +45,7 @@
                     </ul>
                     <!-- tabs Link -->
                     </li> <?php endforeach;?>
-                    <!-- Model starts -->
-                     
-                     <!-- post 2 -->
-                     <li class="collection-item avatar">
-                        <img src="<?php echo URLROOT?>/public/images/person1.jpg" alt="" class="circle">
-                        <span class="title"><strong>User Name</strong></span>
-                        <p><strong>Title </strong><br>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos repellat reprehenderit dolor doloremque. Fugit fugiat ab aut, praesentium nesciunt ratione quo ullam quidem sunt non!
-                        </p>
-                          <!-- tabs for comments -->
-                        <ul class="tabs">
-                            <li class="tab col s4"><a class="active" href="#likes">Likes</a></li>
-                            <li class="tab col s4"><a href="#comments">Comments</a></li>
-                            <li class="tab col s4"><a href="#share">Share</a></li>
-                        </ul>
-                    </li>
+                   
                 </ul>
             </div>
             </div>

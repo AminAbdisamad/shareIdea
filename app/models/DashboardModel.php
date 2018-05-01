@@ -5,6 +5,7 @@ class DashboardModel extends Database
     public function __construct(){
         $this->db = new Database;
     }
+    //get all the posts
     public function getPosts(){
         $this->db->query('SELECT * ,
                           posts.id as postId,
@@ -15,6 +16,18 @@ class DashboardModel extends Database
         return $results;
         
     }
+    //get single post
+    public function getSinglePost($postId)
+    {
+        $this->db->query(
+                        'SELECT * FROM posts WHERE id = :id'
+        );
+        $this->db->bind('id',$postId);
+       $result = $this->db->result();
+       return $result;
+
+    }
+
     public function AddpostToDB($data){
        
 
@@ -38,6 +51,16 @@ class DashboardModel extends Database
         $this->db->query('SELECT * FROM users');
         $rows = $this->db->results();
         return $rows;
+}
+//delete post
+public function deletePostById($id){
+    $this->db->query('DELETE FROM posts WHERE id =:id');
+    $this->db->bind('id',$id);
+    $row = $this->db->execute();
+    if($row){
+        return true;
+    }
+    return false;
 }
 
 
